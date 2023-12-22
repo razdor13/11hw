@@ -10,7 +10,7 @@ function pow(num, degree) {
     }
 }
 
-const firstNumber = prompt("Введіть ціле число");
+const firstNumber = prompt("Введіть число");
 const degree = prompt("Введіть ступінь(цілу)");
 if (firstNumber === null || degree === null) {
     alert("ок...");
@@ -19,7 +19,6 @@ if (firstNumber === null || degree === null) {
     isNaN(degree) ||
     !firstNumber.trim() ||
     !degree.trim() ||
-    !Number.isInteger(+firstNumber) ||
     !Number.isInteger(+degree)
 ) {
     alert("error");
