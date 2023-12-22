@@ -12,14 +12,17 @@ function pow(num, degree) {
 
 const firstNumber = prompt("Введіть ціле число");
 const degree = prompt("Введіть ступінь(цілу)");
-if (firstNumber === null) {
+if (firstNumber === null || degree === null) {
     alert("ок...");
 } else if (
-    (isNaN(firstNumber) && isNaN(degree)) ||
-    (!firstNumber.trim() && !degree.trim()) ||
-    (!Number.isInteger(+firstNumber) && !Number.isInteger(+degree))
+    isNaN(firstNumber) ||
+    isNaN(degree) ||
+    !firstNumber.trim() ||
+    !degree.trim() ||
+    !Number.isInteger(+firstNumber) ||
+    !Number.isInteger(+degree)
 ) {
     alert("error");
 } else {
-    alert(pow(firstNumber, degree));
+    alert(pow(+firstNumber, +degree));
 }
